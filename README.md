@@ -47,34 +47,34 @@ Hi! Yes, we’re on. What time works best for you?
 
 ## WhatsApp Flow (Webhook-based)
 
-┌──────────────┐
-│ WhatsApp API │
-└──────┬───────┘
-       │ (Webhook via ngrok)
-       ▼
-┌──────────────┐
-│  FastAPI App │  ← main.py
-└──────┬───────┘
-       ▼
-┌──────────────┐
-│  LLM Model   │  ← model.py
-└──────────────┘
+    ┌──────────────┐
+    │ WhatsApp API │
+    └──────┬───────┘
+           │  (Webhook via ngrok)
+           ▼
+    ┌──────────────┐
+    │  FastAPI App │   ← main.py
+    └──────┬───────┘
+           ▼
+    ┌──────────────┐
+    │  LLM Model   │   ← model.py
+    └──────────────┘
 
+---
 
 ## Gmail Flow (Independent Script)
 
-┌──────────────┐
-│  Gmail API   │
-└──────┬───────┘
-       ▼
-┌──────────────┐
-│ Gmail Script │  ← gmail.py
-└──────┬───────┘
-       ▼
-┌──────────────┐
-│  LLM Model   │  ← model.py
-└──────────────┘
-
+    ┌──────────────┐
+    │  Gmail API   │
+    └──────┬───────┘
+           ▼
+    ┌──────────────┐
+    │ Gmail Script │   ← gmail.py
+    └──────┬───────┘
+           ▼
+    ┌──────────────┐
+    │  LLM Model   │   ← model.py
+    └──────────────┘
 
 ---
 
@@ -114,15 +114,15 @@ pip install -r requirements.txt
   
 # Running the Application
 
-## 1. Start FastAPI Server (WhatsApp)
-## 2. Expose with ngrok
-## 3. Configure Webhook
+1. Start FastAPI Server (WhatsApp)
+2. Expose with ngrok
+3. Configure Webhook
 **Set webhook URL:**
 ```
 https://your-ngrok-url/webhook
 ```
-## For Email Assistant
-## 1. Run Gmail Auto-Reply
+# For Email Assistant
+Run Gmail Auto-Reply
 ```python gmail.py```
 
 ---
